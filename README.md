@@ -1,4 +1,3 @@
-> **Note:** This repository will be released upon publication of the paper.
 
 ## CausalTrace Architecture
 
