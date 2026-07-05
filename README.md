@@ -2,10 +2,14 @@
 
 Detecting prompt injection attacks on LLM agents through causal graph analysis.
 
+## CausalTrace Architecture
+
 ![CausalTrace Architecture](causaltrace_architecture_final.png)
 
 **CausalBench Generator** included - Docker-based pipeline for generating trajectories with **real API execution**. See [DATA_GENERATION.md](CausalBench/README.md).
-## CausalTrace Architecture
+
+https://huggingface.co/datasets/dSLLab/CausalBench
+
 
 
 ## CausalBench
