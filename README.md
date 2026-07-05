@@ -4,7 +4,7 @@ Detecting prompt injection attacks on LLM agents through causal graph analysis.
 
 ![CausalTrace Architecture](causaltrace_architecture_final.png)
 
-**CausalBench Generator** included - Docker-based pipeline for generating trajectories with **real API execution**. See [DATA_GENERATION.md](DATA_GENERATION.md).
+**CausalBench Generator** included - Docker-based pipeline for generating trajectories with **real API execution**. See [DATA_GENERATION.md](CausalBench/README.md).
 ## CausalTrace Architecture
 
 
@@ -17,11 +17,11 @@ Detecting prompt injection attacks on LLM agents through causal graph analysis.
 
 ```bash
 
-cd Causal-Detection-of-Multi-Step-LLM-Agent-Attacks
+cd CausalTrace
 pip install -e .
 ```
 
-Or run the notebooks directly in [Google Colab](main/notebooks/01_CausalTrace_Quickstart.ipynb) without installing anything.
+Or run the notebooks directly in [Google Colab](notebooks/01_CausalTrace_Quickstart.ipynb) without installing anything.
 
 ## Quick example
 
@@ -84,18 +84,14 @@ This cross-domain data flow is the defining characteristic of prompt injection a
 | [00_Data_Generation](notebooks/00_Data_Generation.ipynb) | Generate CausalBench with Docker & real APIs | ~15 min |
 | [01_Quickstart](notebooks/01_CausalTrace_Quickstart.ipynb) | 5-minute intro demo | ~5 min |
 | [02_Full_Evaluation](notebooks/02_Full_Evaluation.ipynb) | Evaluate on CausalBench dataset | ~10 min |
-| [03_Baseline_Comparison](notebooks/03_Baseline_Comparison.ipynb) | Why causal analysis wins | ~10 min |
-| [04_Detector_Comparison](notebooks/04_Detector_Comparison.ipynb) | Compare 5 detection methods | ~10 min |
-| [05_GNN_Training](notebooks/05_GNN_Training.ipynb) | Train Graph Neural Networks | ~15 min |
-| [06_Feature_Analysis](notebooks/06_Feature_Analysis.ipynb) | Feature importance analysis | ~5 min |
-| [07_Advanced_Detection](notebooks/07_Advanced_Detection.ipynb) | Watermark + LLM-as-Judge + Ensemble | ~10 min |
+
 
 **Start here:** Generate data with `00`, then run notebooks 01-07 in sequence.
 
 ## Project structure
 
 ```
-Causal-Detection-of-Multi-Step-LLM-Agent-Attacks/
+CausalTrace
 ├── causaltrace/              # Main analysis package
 │   ├── models/               # Trajectory, Action, State data structures
 │   ├── graph/                # Causal graph construction
@@ -117,17 +113,7 @@ Causal-Detection-of-Multi-Step-LLM-Agent-Attacks/
 │   ├── 00_Data_Generation.ipynb
 │   ├── 01_Quickstart.ipynb
 │   ├── 02_Full_Evaluation.ipynb
-│   ├── 03_Baseline_Comparison.ipynb
-│   ├── 04_Detector_Comparison.ipynb
-│   ├── 05_GNN_Training.ipynb
-│   ├── 06_Feature_Analysis.ipynb
-│   └── 07_Advanced_Detection.ipynb
 │
-├── data/                     # Datasets
-│   ├── sample/               # Pre-generated sample data
-│   └── causalbench/          # Generated CausalBench data
-│
-├── DATA_GENERATION.md        # Complete data generation guide
 └── README.md                 # This file
 ```
 
